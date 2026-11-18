@@ -1,14 +1,12 @@
 # TaskFlow
 
+[![CI](https://github.com/keerthanan2211/taskflow/actions/workflows/ci.yml/badge.svg)](https://github.com/keerthanan2211/taskflow/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 A real-time project management app for small teams. Create projects, invite teammates, and move tasks across a shared Kanban board. When one person drags a card, everyone else on the project sees it move.
 
 **Stack:** Next.js 14 · TypeScript · Tailwind CSS · NestJS · PostgreSQL · Prisma · Socket.IO · Docker · GitHub Actions
 
-> **Live demo:** _add your deployed URL here_
-> **Demo login:** `demo@taskflow.dev` / `Demo#2026`
-
-<!-- Add screenshots after you run the app: docs/screenshots/board.png, docs/screenshots/task.png -->
-<!-- ![Board](docs/screenshots/board.png) -->
+**Demo account** (created by the seed script): `demo@taskflow.dev` / `Demo#2026`
 
 ---
 
@@ -151,7 +149,7 @@ taskflow/
 Requires [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
 ```bash
-git clone https://github.com/<your-username>/taskflow.git
+git clone https://github.com/keerthanan2211/taskflow.git
 cd taskflow
 docker compose up --build
 ```
@@ -175,7 +173,7 @@ Sign in with `demo@taskflow.dev` / `Demo#2026`.
 **1. Install dependencies**
 
 ```bash
-git clone https://github.com/<your-username>/taskflow.git
+git clone https://github.com/keerthanan2211/taskflow.git
 cd taskflow
 npm run install:all
 ```
