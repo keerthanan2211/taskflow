@@ -1,0 +1,16 @@
+import { Controller, Get } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
+import { PrismaService } from './prisma/prisma.service';
+
+@ApiTags('health')
+@Controller('health')
+export class HealthController {
+  constructor(private readonly prisma: PrismaService) {}
+
+  /** Used by Docker and hosting platforms to check the API and database are up. */
+  @Get()
+  async check() {
+    await this.prisma.$queryRaw`SELECT 1`;
+    return { status: 'ok', time: new Date().toISOString() };
+  }
+}
