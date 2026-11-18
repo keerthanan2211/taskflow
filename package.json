@@ -1,0 +1,17 @@
+{
+  "name": "taskflow",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real-time project management app: Next.js + NestJS + PostgreSQL + Socket.IO",
+  "scripts": {
+    "install:all": "npm --prefix apps/api install && npm --prefix apps/web install",
+    "dev:api": "npm --prefix apps/api run start:dev",
+    "dev:web": "npm --prefix apps/web run dev",
+    "db:migrate": "npm --prefix apps/api run prisma:deploy",
+    "db:seed": "npm --prefix apps/api run seed",
+    "test": "npm --prefix apps/api test && npm --prefix apps/web test",
+    "typecheck": "npm --prefix apps/api run typecheck && npm --prefix apps/web run typecheck",
+    "build": "npm --prefix apps/api run build && npm --prefix apps/web run build"
+  },
+  "engines": { "node": ">=20" }
+}
